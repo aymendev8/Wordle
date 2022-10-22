@@ -14,6 +14,7 @@ public class Bouton extends JButton {
         saligne = a;
         sacolonne = b;
         tableau = t ;
+        this.setEnabled(false);
     }
 
     public Color getSacouleur() {
@@ -30,5 +31,9 @@ public class Bouton extends JButton {
 
     public int getSacolonne() {
         return sacolonne;
+    }
+
+    public Bouton[][] getTableau() {
+        return tableau;
     }
 }

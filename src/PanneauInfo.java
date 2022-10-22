@@ -2,18 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanneauInfo extends JPanel {
-    private String info ;
+    public JLabel info ;
 
     public PanneauInfo(){
-        this.info = "Wordle";
-        this.setBackground(Color.cyan);
-    }
+        this.setBackground(Color.white);
+        this.setPreferredSize(new Dimension(500,30));
+        info = new JLabel("Wordle");
+        info.setForeground(Color.green);
+        info.setFont(new Font("Verdana",1,15));
+        this.add(info);
 
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
     }
 }

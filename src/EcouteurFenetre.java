@@ -37,4 +37,5 @@ public class EcouteurFenetre implements WindowListener {
     public void windowDeactivated(WindowEvent e) {
 
     }
+
 }
