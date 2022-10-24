@@ -1,5 +1,7 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,5 +21,21 @@ public class Lemot {
         }
 
         return result;
+}
+    public static boolean mot_exist(String mot){
+        String ligne = "";
+        File lesmots = new File("./Mots.txt");
+        try{
+            FileReader fr = new FileReader(lesmots);
+            BufferedReader br = new BufferedReader(fr);
+
+            while((ligne= br.readLine()) != null)
+            {
+                if(ligne.equals(mot))
+                    return true;
+            }
+
+        }catch(Exception e){e.printStackTrace();}
+        return false;
     }
 }
